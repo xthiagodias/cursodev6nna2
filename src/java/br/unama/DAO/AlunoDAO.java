@@ -32,9 +32,12 @@ public class AlunoDAO {
             //Criar o SQL 
             st = con.createStatement();
             String sql = "select * from aluno";
+            
+          //  String sql = "INSERT INTO aluno values(5,'Teste','Teste','Teste')";
 
             //Executar o SQL
             result = st.executeQuery(sql);
+           // result = st.executeQuery(sql2);
 
             //Processar os dados retornados 
             while (result.next()) {
