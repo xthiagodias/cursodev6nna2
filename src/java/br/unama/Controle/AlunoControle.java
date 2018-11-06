@@ -37,7 +37,7 @@ public class AlunoControle extends HttpServlet {
     
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Aluno> alunos = alunoDao.consultaAlunos();
+        List<Aluno> alunos = alunoDao.consultaAluno();
         request.setAttribute("LISTA-ALUNOS", alunos);
         request.getRequestDispatcher("/ListaAlunos.jsp").forward(request, response);
 
