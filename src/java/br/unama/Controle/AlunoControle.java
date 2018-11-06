@@ -30,14 +30,16 @@ public class AlunoControle extends HttpServlet {
     private DataSource datasource;
     private AlunoDAO alunoDao;
     
+    @Override
     public void init(ServletConfig config) throws ServletException {
         alunoDao = new AlunoDAO(datasource);
     }
     
+    @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Aluno> alunos = alunoDao.consultaAlunos();
         request.setAttribute("LISTA-ALUNOS", alunos);
-        request.getRequestDispatcher("").forward(request, response);
+        request.getRequestDispatcher("/ListaAlunos.jsp").forward(request, response);
 
 
     }
