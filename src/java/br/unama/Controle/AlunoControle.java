@@ -30,6 +30,8 @@ public class AlunoControle extends HttpServlet {
     private DataSource datasource;
     private AlunoDAO alunoDao;
     
+
+    
     @Override
     public void init(ServletConfig config) throws ServletException {
         alunoDao = new AlunoDAO(datasource);
